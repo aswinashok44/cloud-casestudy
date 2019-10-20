@@ -1,0 +1,19 @@
+<html>  
+<head>  
+<title>Landmarks</title>  
+</head>  
+<body>  
+<h2>Landmarks</h2>  
+<p style="font-size: 20;">
+	{% for landmark in landmarks %}
+ 		{{landmark.description}} <br>
+ 		{% for location in landmark.locations %}
+            {{'Latitude {}'.format(location.lat_lng.latitude)}} <br>
+            {{'Longitude {}'.format(location.lat_lng.longitude)}}
+        {% endfor %}
+        <br>
+	{% endfor %}
+</p>
+<a href="/">Try Another</a>
+</body>  
+</html>  

@@ -1,0 +1,19 @@
+<html>  
+<head>  
+    <title>Detect Landmarks</title>  
+</head>  
+<body>
+    <h3>
+        Detect Landmarks Using Google Cloud Vision API
+    </h3>
+    {% if error %}
+    <div style="color:red;">
+        <p><strong>Error:</strong> {{ error }}</p>
+    </div>
+    {% endif %} 
+    <form action = "/success" method = "post" enctype="multipart/form-data">  
+        <input type="file" name="file" />  
+        <input type = "submit" value="Upload">  
+    </form>  
+</body>  
+</html>  
