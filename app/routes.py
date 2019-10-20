@@ -4,8 +4,7 @@ import time
 from flask import render_template, redirect, url_for, request, flash
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = 'Cloud/app/static/images/'
-SECRET_KEY = os.environ.get('SECRET_KEY') or 'mailbot2019*'
+UPLOAD_FOLDER = 'cloud-casestudy/app/static/images/'
 
 ALLOWED_EXTENSIONS = set([ 'png', 'jpg', 'jpeg'])
 
@@ -14,7 +13,7 @@ def allowed_file(filename):
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/mnt/d/Cloud/vision api-61625b706645.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/mnt/d/cloud-casestudy/vision api-61625b706645.json"
 
 def detect_landmarks(path):
     """Detects landmarks in the file."""
